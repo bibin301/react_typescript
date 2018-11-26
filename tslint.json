@@ -8,6 +8,7 @@
     ]
   },
   "rules": {
+    "javascript.validate.enable": false,
     "ordered-imports": false
   }
 }

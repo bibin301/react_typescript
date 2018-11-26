@@ -1,14 +1,14 @@
 import * as React from 'react';
-import './App.css';
 
 
+import Home from './view/home'
 
 class App extends React.Component {
   public render() {
     return (
       <div className="">
       <div className="container">
-      test
+      <Home/>
         </div>
       
        
