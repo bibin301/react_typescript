@@ -29,11 +29,9 @@ class Home extends React.Component<IntProps> {
       </div>
     )
   }
-  
-  private addUser = (e: any) => {
 
-    alert("hello")
-    getUserList();
+  private addUser = (e: any) => {
+     getUserList();
   }
 
 }
