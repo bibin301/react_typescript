@@ -1,29 +1,24 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { getUserList } from '../service/common/action';
-import rootReducer from '../store/index';
+import { IntRootStore } from '../store/rootReducer';
 
-// interface IntState {
-//     userList: any,
+interface IntProps {
+  userListInfo: any
+}
 
-//   }
-
-const mapStateToProps = (state : rootReducer) => ({
+const mapStateToProps = (state: IntRootStore) => ({
   userListInfo: state.commonReducer.userListInfo,
-  
+
 })
 
-class Home extends React.Component {
-  // constructor(){
-  //   super(null)
-  //   this.state = {
-  //     userList:""
-  //   }
-  // }
- 
-
+class Home extends React.Component<IntProps> {
 
   public render() {
+    const { userListInfo } = this.props;
+    /* tslint:disable */
+    console.log('res...', userListInfo)
+    /* tslint:enable */
 
 
     return (
@@ -34,14 +29,14 @@ class Home extends React.Component {
       </div>
     )
   }
-  private addUser = (e: any)  => {
+  
+  private addUser = (e: any) => {
 
     alert("hello")
     getUserList();
   }
 
 }
-
 
 export default connect(
   mapStateToProps,
