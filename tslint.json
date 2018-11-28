@@ -9,6 +9,7 @@
   },
   "rules": {
     "javascript.validate.enable": false,
-    "ordered-imports": false
+    "ordered-imports": false,
+    "jsx-no-lambda": true
   }
 }
